@@ -33,7 +33,7 @@ Cliente → API EC2 → Processamento de boletos → Armazenamento EBS → Uploa
 
 ### Evidência da arquitetura
 
-![Arquitetura](images/arquitetura-boletos.png)
+![Arquitetura](imagens/GFT-Modelagem.drawio.png)
 
 
 ## Aprendizados
