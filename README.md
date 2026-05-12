@@ -1,54 +1,51 @@
-# gft-fundamentos-cloud-aws
-Repositório com anotações práticas e documentação dos laboratórios do bootcamp GFT - Fundamentos de Cloud com AWS, abordando EC2, AMIs e snapshots EBS.
+# GFT - Fundamentos de Cloud com AWS
 
-# Desafio DIO - Gerenciamento de Instâncias EC2
+Repositório criado para documentar o desafio prático do bootcamp **GFT - Fundamentos de Cloud com AWS** na DIO, aplicando os conhecimentos adquiridos nas aulas sobre gerenciamento de instâncias na AWS.
 
-## Objetivo
-Aplicar conhecimentos sobre gerenciamento de instâncias EC2 utilizando AMIs e Snapshots EBS.
+Além das práticas realizadas no laboratório, também foi feita a modelagem de um sistema de geração de boletos bancários utilizando serviços da AWS como exemplo de aplicação real.
 
 ---
 
-## Aula 1 - Criação e uso de imagens AMI
+## Descrição do desafio
 
-### O que é AMI?
-Amazon Machine Image é um modelo utilizado para criar instâncias EC2.
+O objetivo deste desafio foi consolidar os conhecimentos sobre infraestrutura em nuvem utilizando recursos da AWS.
 
-### Etapas realizadas
-- Criação de instância EC2
-- Configuração inicial
-- Criação da AMI personalizada
-- Criação de nova instância baseada na AMI
+Durante o laboratório foram abordados dois principais tópicos:
 
-### Benefícios
-- Escalabilidade
-- Padronização
-- Rapidez no provisionamento
+- Criação e uso de imagens AMI
+- Criação de Snapshots EBS
 
----
+Como complemento prático, foi modelado um sistema responsável pela geração de boletos, onde:
 
-## Aula 2 - Snapshots EBS
-
-### O que é EBS?
-Elastic Block Store é o armazenamento em disco da EC2.
-
-### O que é Snapshot?
-Backup incremental do volume EBS.
-
-### Etapas realizadas
-- Criação do volume
-- Associação à instância
-- Criação do snapshot
-- Restauração do volume
-
-### Benefícios
-- Backup
-- Recuperação
-- Segurança dos dados
+- Uma API hospedada em uma instância EC2 processa as requisições
+- O armazenamento persistente utiliza volumes EBS
+- Os boletos gerados são armazenados em um bucket do Amazon Simple Storage Service
+- AMIs podem ser utilizadas para replicar rapidamente o ambiente
+- Snapshots EBS podem ser usados para backup e recuperação
 
 ---
+
+## Arquitetura modelada
+
+Fluxo simplificado:
+
+Cliente → API EC2 → Processamento de boletos → Armazenamento EBS → Upload para S3
+
+### Evidência da arquitetura
+
+![Arquitetura](images/arquitetura-boletos.png)
+
 
 ## Aprendizados
-Aprendi como reutilizar ambientes com AMI e proteger dados com snapshots.
+
+- Escalabilidade com AMI
+- Backup com snapshots
+- Armazenamento em S3
+- Modelagem de arquitetura em nuvem
+- Aplicação prática em sistema financeiro
+
+---
 
 ## Conclusão
-Esses recursos facilitam escalabilidade e backup na AWS.
+
+Este desafio ajudou a entender como serviços da AWS podem ser utilizados tanto em laboratórios técnicos quanto em cenários reais, como um sistema de geração de boletos.
